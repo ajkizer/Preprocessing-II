@@ -4,10 +4,20 @@
   div {
     .flex(row, space-between, center, no-wrap);
 
+    @media screen and @mobile {
+      .flex(column, center, center, no-wrap);
+    }
+
     div {
       .flex(row, space-between, center, no-wrap);
       .padding-top-bottom(3%);
       width: 40%;
+
+      @media screen and @mobile {
+        .flex(row, space-around, flex-end, no-wrap);
+        width: 100%;
+      }
+
       a {
         font-size: @medium;
         text-decoration: none;
