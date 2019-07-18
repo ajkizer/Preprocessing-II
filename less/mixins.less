@@ -1,1 +1,23 @@
-// Mixins in here
+.flex(@direction, @justify, @align, @wrap) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+  flex-wrap: @wrap;
+} // Mixins in here
+
+.padding-top-bottom (@num) {
+  padding-top: @num;
+  padding-bottom: @num;
+}
+
+.button(@color, @text) {
+  height: 50px;
+  background: @color;
+  color: @text;
+  border-radius: 12px;
+  .flex(row, center, center, no-wrap);
+  font-size: @medium;
+  font-weight: bold;
+  width: 100%;
+}
